@@ -1,10 +1,10 @@
-Hello. This is my approach to the task I got from a great guy that wrote to me on LinkedIn :). I decided to give it a go since I like adventures and that seems like one to me.
+Welcome! This is my approach to the task I got from a great guy that wrote to me on LinkedIn 😁. I decided to give it a go since the stack looks quite awesome 🔥
 
 ## Launching the app locally
 
 First, run the development server:
 
-```bash
+```
 yarn dev
 ```
 
