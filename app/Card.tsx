@@ -1,9 +1,9 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from 'next/image'
+import Link from 'next/link'
 
-import { Post } from './types';
+import { Post } from './types'
 
-type Props = Post & { categoryNames: (string | undefined)[] };
+type Props = Post & { categoryNames: (string | undefined)[] }
 
 const Card = ({ id, title, excerpt, imageUrl, slug, categoryNames }: Props) => {
   return (
@@ -31,7 +31,7 @@ const Card = ({ id, title, excerpt, imageUrl, slug, categoryNames }: Props) => {
         <p>{excerpt}</p>
       </div>
     </Link>
-  );
-};
+  )
+}
 
-export default Card;
+export default Card

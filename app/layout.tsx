@@ -1,22 +1,22 @@
-import { Lato } from 'next/font/google';
+import { Lato } from 'next/font/google'
 
-import './globals.css';
+import './globals.css'
 
 export const metadata = {
   title: 'Lukasz Komar',
   description: 'App for emersoft recruitment showcase',
-};
+}
 
 const lato = Lato({
   weight: ['300', '700'],
   style: 'normal',
   subsets: ['latin'],
-});
+})
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html
@@ -25,5 +25,5 @@ export default function RootLayout({
     >
       <body>{children}</body>
     </html>
-  );
+  )
 }

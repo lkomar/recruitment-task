@@ -1,29 +1,29 @@
-import Card from './Card';
-import { Category, Post } from './types';
-import { getPostCategoryNames } from './utils';
+import Card from './Card'
+import { Category, Post } from './types'
+import { getPostCategoryNames } from './utils'
 
 const url = `http://${process.env.HOST || 'localhost'}:${
   process.env.PORT ?? '3000'
-}`;
+}`
 
 const getPosts = async (): Promise<Post[]> => {
-  const response = await fetch(`${url}/api/posts`);
+  const response = await fetch(`${url}/api/posts`)
 
-  return response.json();
-};
+  return response.json()
+}
 
 const getCategories = async (): Promise<Category[]> => {
-  const response = await fetch(`${url}/api/categories`);
+  const response = await fetch(`${url}/api/categories`)
 
-  return response.json();
-};
+  return response.json()
+}
 
 export default async function Home() {
-  const posts = await getPosts();
-  const categories = await getCategories();
+  const posts = await getPosts()
+  const categories = await getCategories()
 
   const categoryNames = (categoryIds: number[]) =>
-    getPostCategoryNames(categoryIds, categories);
+    getPostCategoryNames(categoryIds, categories)
 
   return (
     <div>
@@ -44,5 +44,5 @@ export default async function Home() {
         ))}
       </div>
     </div>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-import { Category } from './types';
+import { Category } from './types'
 
 export const getPostCategoryNames = (
   categoryIds: number[],
@@ -6,4 +6,4 @@ export const getPostCategoryNames = (
 ): (string | undefined)[] =>
   categoryIds.map(
     (id) => categories.find((category) => category.id === id)?.name
-  );
+  )
