@@ -9,7 +9,7 @@ const Card = ({ id, title, excerpt, imageUrl, slug, categoryNames }: Props) => {
   return (
     <Link
       href={`/post/${id}`}
-      className="grid overflow-hidden rounded-2xl border-2 border-solid border-gray-300 shadow-[0.2rem_0.2rem_0.8rem_rgba(0,0,0,0.2)] dark:border-gray-400 dark:shadow-cyan-900"
+      className="grid overflow-hidden rounded-2xl shadow-[0.2rem_0.2rem_0.8rem_rgba(0,0,0,0.2)] dark:shadow-cyan-900"
     >
       <Image
         src={imageUrl}
