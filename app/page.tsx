@@ -26,7 +26,7 @@ export default async function Home() {
     getPostCategoryNames(categoryIds, categories);
 
   return (
-    <div className="grid grid-rows-1">
+    <div>
       <div className="mb-4 flex flex-col items-center">
         <h1>From the blog</h1>
         <h4 className="max-w-xl text-center">
@@ -34,7 +34,7 @@ export default async function Home() {
           numquam tempora magnam.
         </h4>
       </div>
-      <div className="grid w-full grid-cols-3 items-center justify-center gap-8">
+      <div className="grid grid-cols-fit justify-center gap-8 p-12">
         {posts.map((post) => (
           <Card
             {...post}
