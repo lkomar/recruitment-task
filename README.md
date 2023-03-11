@@ -1,4 +1,4 @@
-Welcome! This is my approach to the task I got from a great guy that wrote to me on LinkedIn 😁. I decided to give it a go since the stack looks quite awesome 🔥
+Welcome! This is my approach to the task I got from a great guy that wrote to me on LinkedIn 😁. I decided to give it a go since the stack looks quite awesome 🔥. I'm a huge fan of dark mode! With that in mind I added some basic styling for it, but let the browser defaults decide which to present.
 
 ---
 
