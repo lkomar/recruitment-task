@@ -21,6 +21,7 @@ const Card = ({ id, title, excerpt, imageUrl, slug, categoryNames }: Props) => {
       className="grid overflow-hidden rounded-2xl shadow-[0.2rem_0.2rem_0.8rem_rgba(0,0,0,0.2)] dark:shadow-cyan-900"
     >
       <Image
+        // I would normally add a local asset to make sure it always renders, but seems slightly overkill in this case
         src={!error ? imageUrl : 'https://placehold.co/600x400/jpeg'}
         alt={slug}
         width="0"
