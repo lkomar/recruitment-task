@@ -10,8 +10,13 @@ const nextConfig = {
         hostname: 'picsum.photos',
         pathname: '/id/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
+        pathname: '/**',
+      },
     ],
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
