@@ -7,3 +7,7 @@ export const getPostCategoryNames = (
   categoryIds.map(
     (id) => categories.find((category) => category.id === id)?.name
   )
+
+export const apiUrl = `http://${process.env.HOST || 'localhost'}:${
+  process.env.PORT ?? '3000'
+}`
