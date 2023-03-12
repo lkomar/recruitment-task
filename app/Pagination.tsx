@@ -8,9 +8,10 @@ import { apiUrl } from './utils'
 interface Props {
   page: number
   maxPages: number
+  classNames?: string
 }
 
-const Pagination = ({ page, maxPages }: Props) => {
+const Pagination = ({ page, maxPages, classNames }: Props) => {
   const handlePreviousClick = () => {
     if (page > 1) {
       window.location.href = `${apiUrl}/?page=${page - 1}`
@@ -24,7 +25,11 @@ const Pagination = ({ page, maxPages }: Props) => {
   }
 
   return (
-    <div className="flex content-center justify-center">
+    <div
+      className={`flex content-center justify-center ${
+        classNames ? classNames : ''
+      }`}
+    >
       <Button disabled={page === 1} onClick={handlePreviousClick}>
         Prev
       </Button>

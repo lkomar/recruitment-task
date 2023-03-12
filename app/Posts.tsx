@@ -44,6 +44,7 @@ const Posts = ({ categories }: Props) => {
           />
         ))}
       </div>
+      <Pagination page={page} maxPages={pages} classNames="mb-4" />
     </>
   )
 }
