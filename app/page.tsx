@@ -8,8 +8,7 @@ const url = `http://${process.env.HOST || 'localhost'}:${
 }`
 
 const getPosts = async (page?: number): Promise<PaginatedPosts> => {
-  // const response = await fetch(`${url}/api/posts${page ? `?page=${page}` : ''}`)
-  const response = await fetch(`${url}/api/posts?page=1`)
+  const response = await fetch(`${url}/api/posts${page ? `?page=${page}` : ''}`)
 
   return response.json()
 }
