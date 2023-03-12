@@ -19,11 +19,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html
-      lang="en"
-      className={`${lato.className} bg-white text-black dark:bg-gray-900 dark:text-white`}
-    >
-      <body>{children}</body>
+    <html lang="en">
+      <body
+        className={`${lato.className} bg-white text-black dark:bg-gray-900 dark:text-white`}
+      >
+        {children}
+      </body>
     </html>
   )
 }
