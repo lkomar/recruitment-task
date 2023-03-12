@@ -1,8 +1,11 @@
 'use client'
 
+import { useSearchParams } from 'next/navigation'
 import { use } from 'react'
+
 import { PaginatedPosts } from './api/posts/route'
 import Card from './Card'
+import Pagination from './Pagination'
 import { Category } from './types'
 import { apiUrl, getPostCategoryNames } from './utils'
 
@@ -19,13 +22,17 @@ interface Props {
 }
 
 const Posts = ({ categories }: Props) => {
-  const { posts } = use(getPosts())
+  const searchParams = useSearchParams()
+  const page = parseInt(searchParams.get('page') || '1')
+
+  const { posts, pages } = use(getPosts(page))
 
   const categoryNames = (categoryIds: number[]) =>
     getPostCategoryNames(categoryIds, categories)
 
   return (
-    <div className="posts">
+    <>
+      <Pagination page={page} maxPages={pages} />
       <div className="grid grid-cols-fit justify-center gap-8 p-12">
         {posts.map((post) => (
           <Card
@@ -35,7 +42,7 @@ const Posts = ({ categories }: Props) => {
           />
         ))}
       </div>
-    </div>
+    </>
   )
 }
 
