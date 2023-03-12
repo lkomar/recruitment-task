@@ -12,15 +12,13 @@ export const apiUrl = `http://${process.env.HOST || 'localhost'}:${
   process.env.PORT ?? '3000'
 }`
 
-export const makeQueryClient = <T extends any>() => {
-  const fetchMap = new Map<string, Promise<T>>()
-
-  const queryClient = (name: string, query: Promise<T>): Promise<T> => {
-    if (!fetchMap.get(name)) {
-      fetchMap.set(name, query)
-    }
-    return fetchMap.get(name)!
+export const queryClient = <T extends any>(
+  name: string,
+  query: Promise<T>,
+  fetchMap: Map<string, Promise<T>>
+): Promise<T> => {
+  if (!fetchMap.get(name)) {
+    fetchMap.set(name, query)
   }
-
-  return queryClient
+  return fetchMap.get(name)!
 }
