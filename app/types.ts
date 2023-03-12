@@ -12,3 +12,7 @@ export interface Category {
   name: string
   slug: string
 }
+
+export interface DynamicPage<T extends {}> {
+  params: T
+}
