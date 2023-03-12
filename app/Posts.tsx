@@ -7,7 +7,7 @@ import { PaginatedPosts } from './api/posts/route'
 import Card from './Card'
 import Pagination from './Pagination'
 import { Category } from './types'
-import { apiUrl, getPostCategoryNames } from './utils'
+import { apiUrl, getPostCategoryNames, makeQueryClient } from './utils'
 
 const getPosts = async (page?: number): Promise<PaginatedPosts> => {
   const response = await fetch(
@@ -25,7 +25,9 @@ const Posts = ({ categories }: Props) => {
   const searchParams = useSearchParams()
   const page = parseInt(searchParams.get('page') || '1')
 
-  const { posts, pages } = use(getPosts(page))
+  const queryClient = makeQueryClient<PaginatedPosts>()
+
+  const { posts, pages } = use(queryClient('posts', getPosts(page)))
 
   const categoryNames = (categoryIds: number[]) =>
     getPostCategoryNames(categoryIds, categories)
