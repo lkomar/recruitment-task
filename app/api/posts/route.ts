@@ -3,8 +3,6 @@ import { NextRequest, NextResponse } from 'next/server'
 import blog from '@/public/blog.json'
 import { paginationUtils } from '@/app/utils'
 
-const ITEMS_PER_PAGE = 15
-
 export type Post = (typeof blog.posts)[number]
 
 export interface PaginatedPosts {

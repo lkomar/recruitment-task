@@ -42,7 +42,6 @@ yarn coverage
 
 ## TODO
 
-- [ ] Write unit tests for API endpoints
 - [ ] Add basic doumentation to code
 - [ ] Check if styles can be improved
 - [x] Initiate project, cleanup boilerplate, install important packages
@@ -59,3 +58,4 @@ yarn coverage
 - [x] Clickable category badges
 - [x] Redirect to category on badge click
 - [x] Add translateY effect on post cards
+- [x] Write unit tests for API endpoints and some basic front logic

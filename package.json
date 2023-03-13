@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cypress:open": "cypress open",
+    "test": "cypress run --e2e"
   },
   "dependencies": {
     "@types/node": "18.15.0",
@@ -21,6 +23,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
+    "cypress": "^12.7.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.4",
