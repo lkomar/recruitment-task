@@ -1,3 +1,5 @@
+import { notFound } from 'next/navigation'
+
 import { DynamicPage } from '@/app/types'
 import { getCategories, getPostsByCategoryId } from '@/app/api'
 import Posts from '@/app/Posts'
@@ -18,10 +20,16 @@ const CategoryPosts = async ({
     getPostsByCategoryId(params.categoryId, page),
   ])
 
+  if (!posts.length) notFound()
+
+  const category = categories.find(
+    (category) => category.id === parseInt(params.categoryId)
+  )
+
   return (
     <>
       <div className="mb-4 flex flex-col items-center">
-        <h1>Posts for category {`"${params.categoryId}"`}</h1>
+        <h1>Posts for category {`"${category?.name}"`}</h1>
       </div>
       <Posts
         categories={categories}

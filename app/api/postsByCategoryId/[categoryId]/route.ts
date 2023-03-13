@@ -5,6 +5,11 @@ import { DynamicPage } from '@/app/types'
 import { paginationUtils } from '@/app/utils'
 import { Post } from '@/app/api/posts/route'
 
+/**
+ * I'm using id in request params instead of name since normlly
+ * I wouldn't be sure if names are unique even if they might be SEO
+ * friendly
+ */
 export const GET = async (
   request: NextRequest,
   { params }: DynamicPage<{ categoryId: string }>
