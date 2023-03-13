@@ -1,8 +1,7 @@
 'use client'
 
-import { redirect } from 'next/navigation'
-
-import Button from './Button'
+import StyledLink from './StyledLink'
+import DisabledButton from './DisabledButton'
 import { apiUrl } from './utils'
 
 interface Props {
@@ -11,36 +10,26 @@ interface Props {
   classNames?: string
 }
 
-const Pagination = ({ page, maxPages, classNames }: Props) => {
-  const handlePreviousClick = () => {
-    if (page > 1) {
-      window.location.href = `${apiUrl}/?page=${page - 1}`
-    }
-  }
-
-  const handleNextClick = () => {
-    if (page < maxPages) {
-      window.location.href = `${apiUrl}/?page=${page + 1}`
-    }
-  }
-
-  return (
-    <div
-      className={`flex content-center justify-center ${
-        classNames ? classNames : ''
-      }`}
-    >
-      <Button disabled={page === 1} onClick={handlePreviousClick}>
-        Prev
-      </Button>
-      <span className="self-center">
-        {page} / {maxPages}
-      </span>
-      <Button disabled={page === maxPages} onClick={handleNextClick}>
-        Next
-      </Button>
-    </div>
-  )
-}
+const Pagination = ({ page, maxPages, classNames }: Props) => (
+  <div
+    className={`flex content-center justify-center ${
+      classNames ? classNames : ''
+    }`}
+  >
+    {page > 1 ? (
+      <StyledLink href={`${apiUrl}/?page=${page - 1}`}>Prev</StyledLink>
+    ) : (
+      <DisabledButton>Prev</DisabledButton>
+    )}
+    <span className="self-center">
+      {page} / {maxPages}
+    </span>
+    {page < maxPages ? (
+      <StyledLink href={`${apiUrl}/?page=${page + 1}`}>Next</StyledLink>
+    ) : (
+      <DisabledButton>Next</DisabledButton>
+    )}
+  </div>
+)
 
 export default Pagination
