@@ -21,7 +21,7 @@ const PostDetails = async ({ params }: DynamicPage<Props>) => {
 
   return (
     <div className="mt-10 ml-auto mr-auto flex max-w-3xl flex-col justify-center gap-8">
-      <h1 className="self-center">Post details: {params.slug}</h1>
+      <h1 className="self-center">{post.title}</h1>
       <Image
         src={post.imageUrl}
         alt={post.slug}
@@ -30,12 +30,12 @@ const PostDetails = async ({ params }: DynamicPage<Props>) => {
         sizes="100vw"
         className="h-auto w-fit self-center"
       />
+      <p>{post.excerpt}</p>
       {categoryNames.map((name, index) => (
         <span className="text-blue-800 dark:text-indigo-300" key={index}>
           {name}
         </span>
       ))}
-      <p>{post.excerpt}</p>
     </div>
   )
 }
