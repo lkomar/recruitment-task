@@ -1,5 +1,7 @@
 import { Category } from '@/app/api/categories/route'
 
+const ITEMS_PER_PAGE = 15
+
 export const getPostCategoryNames = (
   categoryIds: number[],
   categories: Category[]
@@ -26,4 +28,9 @@ export const filterCollection = <T extends {}>(
   )
 
   return filteredCollection
+}
+
+export const paginationUtils = {
+  limit: ITEMS_PER_PAGE,
+  offset: (page: number) => page * ITEMS_PER_PAGE,
 }

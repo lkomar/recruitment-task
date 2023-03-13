@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 
 import { DynamicPage } from '@/app/types'
-import { getCategories, getPost } from '@/app/api'
+import { getCategories, getPostBySlug } from '@/app/api'
 import { getPostCategoryNames } from '@/app/utils'
 
 interface Props {
@@ -11,7 +11,7 @@ interface Props {
 
 const PostDetails = async ({ params }: DynamicPage<Props>) => {
   const [post, categories] = await Promise.all([
-    getPost(params.slug),
+    getPostBySlug(params.slug),
     getCategories(),
   ])
 

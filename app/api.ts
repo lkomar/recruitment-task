@@ -8,7 +8,7 @@ export const getCategories = async (): Promise<Category[]> => {
   return response.json()
 }
 
-export const getPosts = async (page?: number): Promise<PaginatedPosts> => {
+export const getPosts = async (page?: string): Promise<PaginatedPosts> => {
   const response = await fetch(
     `${apiUrl}/api/posts${page ? `?page=${page}` : ''}`
   )
@@ -16,7 +16,7 @@ export const getPosts = async (page?: number): Promise<PaginatedPosts> => {
   return response.json()
 }
 
-export const getPost = async (slug: string): Promise<Post> => {
+export const getPostBySlug = async (slug: string): Promise<Post> => {
   const response = await fetch(`${apiUrl}/api/post/${slug}`)
 
   return response.json()

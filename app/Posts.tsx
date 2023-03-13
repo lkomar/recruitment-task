@@ -12,8 +12,8 @@ import { filterCollection, getPostCategoryNames } from './utils'
 interface Props {
   categories: Category[]
   posts: Post[]
-  page: number
-  maxPages: number
+  page: string
+  maxPages: string
 }
 
 const Posts = ({ categories, posts, page, maxPages }: Props) => {
@@ -25,8 +25,7 @@ const Posts = ({ categories, posts, page, maxPages }: Props) => {
 
   return (
     <>
-      <Pagination page={page} maxPages={maxPages} />
-      <div className="mt-8 flex justify-center">
+      <div className="mb-8 flex justify-center">
         <Search
           query={query}
           setQuery={setQuery}
@@ -34,6 +33,7 @@ const Posts = ({ categories, posts, page, maxPages }: Props) => {
           className="w-1/2 rounded-md border-[1px] border-solid border-sky-600 px-4 py-2 text-black dark:border-2 dark:border-sky-700 dark:bg-gray-200"
         />
       </div>
+      <Pagination page={parseInt(page)} maxPages={parseInt(maxPages)} />
       {filteredPosts.length ? (
         <div className="grid grid-cols-fit justify-center gap-8 p-12">
           {filteredPosts.map((post) => (
@@ -47,7 +47,11 @@ const Posts = ({ categories, posts, page, maxPages }: Props) => {
       ) : (
         <div className="flex justify-center p-12">No hits</div>
       )}
-      <Pagination page={page} maxPages={maxPages} classNames="mb-4" />
+      <Pagination
+        page={parseInt(page)}
+        maxPages={parseInt(maxPages)}
+        classNames="mb-4"
+      />
     </>
   )
 }

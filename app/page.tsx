@@ -4,7 +4,7 @@ import { getCategories, getPosts } from './api'
 type Props = { searchParams: { page?: string } }
 
 export default async function Home({ searchParams }: Props) {
-  const page = parseInt(searchParams?.page ?? '1')
+  const page = searchParams?.page ?? '1'
 
   const [categories, { posts, pages }] = await Promise.all([
     getCategories(),
@@ -12,7 +12,7 @@ export default async function Home({ searchParams }: Props) {
   ])
 
   return (
-    <div>
+    <>
       <div className="mb-4 flex flex-col items-center">
         <h1>From the blog</h1>
         <h4 className="max-w-xl text-center">
@@ -24,8 +24,8 @@ export default async function Home({ searchParams }: Props) {
         categories={categories}
         posts={posts}
         page={page}
-        maxPages={pages}
+        maxPages={pages.toString()}
       />
-    </div>
+    </>
   )
 }
