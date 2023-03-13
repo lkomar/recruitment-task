@@ -1,7 +1,9 @@
 import Posts from './Posts'
 import { getCategories, getPosts } from './api'
 
-type Props = { searchParams: { page?: string } }
+interface Props {
+  searchParams: { page?: string }
+}
 
 export default async function Home({ searchParams }: Props) {
   const page = searchParams?.page ?? '1'
