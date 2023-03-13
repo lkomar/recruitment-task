@@ -1,4 +1,4 @@
-Welcome! This is my approach to the task I got from a great guy that wrote to me on LinkedIn 😁. I decided to give it a go since the stack looks quite awesome 🔥. I'm a huge fan of dark mode! With that in mind I added some basic styling for it, but let the browser defaults decide which to present.
+Welcome! This is my approach to the task I got from a great guy that wrote to me on LinkedIn 😁. I decided to give it a go since the stack looks quite awesome 🔥. I'm a huge fan of dark mode! With that in mind I added some basic styling for it, but let the browser defaults decide which to present. I didn't use Cypress for testing before so I decided I'll learn something new even though it's probably not the most common choice for a testing library.
 
 ---
 
@@ -34,16 +34,8 @@ If you want to run tests for the app, simply run
 yarn test
 ```
 
-If you want to see a coverage report for the tests, you can also run
-
-```
-yarn coverage
-```
-
 ## TODO
 
-- [ ] Add basic doumentation to code
-- [ ] Check if styles can be improved
 - [x] Initiate project, cleanup boilerplate, install important packages
 - [x] Implement dark mode 🔥
 - [x] First endpoint to serve any data from API
@@ -59,3 +51,5 @@ yarn coverage
 - [x] Redirect to category on badge click
 - [x] Add translateY effect on post cards
 - [x] Write unit tests for API endpoints and some basic front logic
+- [x] Check if styles can be improved
+- [x] Add basic doumentation to code
