@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 import blog from '@/public/blog.json'
-import { DynamicPage } from '../../../types'
+import { DynamicPage } from '@/app/types'
 
 export const GET = async (
   request: NextRequest,
