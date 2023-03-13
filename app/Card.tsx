@@ -18,7 +18,7 @@ const Card = ({ title, excerpt, imageUrl, slug, categoryNames }: Props) => {
   return (
     <Link
       href={`/post/${slug}`}
-      className="grid overflow-hidden rounded-2xl shadow-[0.2rem_0.2rem_0.8rem_rgba(0,0,0,0.2)] dark:shadow-cyan-900"
+      className="grid overflow-hidden rounded-2xl shadow-[0.2rem_0.2rem_0.8rem_rgba(0,0,0,0.2)] transition hover:-translate-y-2 dark:shadow-cyan-900"
     >
       <Image
         // I would normally add a local asset to make sure it always renders, but seems slightly overkill in this case

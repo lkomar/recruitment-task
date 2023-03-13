@@ -42,7 +42,6 @@ yarn coverage
 
 ## TODO
 
-- [ ] Add translateY effect on post cards
 - [ ] Write unit tests for API endpoints
 - [ ] Add basic doumentation to code
 - [ ] Check if styles can be improved
@@ -59,3 +58,4 @@ yarn coverage
 - [x] Filter posts by category
 - [x] Clickable category badges
 - [x] Redirect to category on badge click
+- [x] Add translateY effect on post cards
