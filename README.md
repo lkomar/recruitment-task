@@ -39,3 +39,21 @@ If you want to see a coverage report for the tests, you can also run
 ```
 yarn coverage
 ```
+
+## TODO
+
+- [ ] Redirect to category on badge click
+- [ ] Write unit tests for API endpoints
+- [ ] Add basic doumentation to code
+- [ ] Check if styles can be improved
+- [x] Initiate project, cleanup boilerplate, install important packages
+- [x] Implement dark mode 🔥
+- [x] First endpoint to serve any data from API
+- [x] Request the data from API and display them on site
+- [x] Add basic data from Post details to card component
+- [x] Add pagination to posts endpoint
+- [x] Paginate posts on client-side
+- [x] Add post details page
+- [x] Add search input filtering posts on Client side
+- [x] Add endpoint for filtering posts by categories
+- [x] Filter posts by category
