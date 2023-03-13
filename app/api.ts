@@ -21,3 +21,16 @@ export const getPostBySlug = async (slug: string): Promise<Post> => {
 
   return response.json()
 }
+
+export const getPostsByCategoryId = async (
+  categoryId: string,
+  page?: string
+): Promise<PaginatedPosts> => {
+  const response = await fetch(
+    `${apiUrl}/api/postsByCategoryId/${categoryId}${
+      page ? `?page=${page}` : ''
+    }`
+  )
+
+  return response.json()
+}
