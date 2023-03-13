@@ -1,6 +1,8 @@
+import { Category } from '@/app/api/categories/route'
+import { Post } from '@/app/api/posts/route'
+
 import Card from './Card'
 import Pagination from './Pagination'
-import { Category, Post } from './types'
 import { getPostCategoryNames } from './utils'
 
 interface Props {

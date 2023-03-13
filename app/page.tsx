@@ -1,7 +1,7 @@
-import { Category } from './types'
 import { apiUrl } from './utils'
 import Posts from './Posts'
 import { PaginatedPosts } from './api/posts/route'
+import { Category } from './api/categories/route'
 
 const getPosts = async (page?: number): Promise<PaginatedPosts> => {
   const response = await fetch(

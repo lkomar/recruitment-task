@@ -4,11 +4,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 
-import { Post } from './types'
+import { Post } from '@/app/api/posts/route'
 
 type Props = Post & { categoryNames: (string | undefined)[] }
 
-const Card = ({ id, title, excerpt, imageUrl, slug, categoryNames }: Props) => {
+const Card = ({ title, excerpt, imageUrl, slug, categoryNames }: Props) => {
   const [error, setError] = useState(false)
 
   const handleError = () => {
@@ -17,7 +17,7 @@ const Card = ({ id, title, excerpt, imageUrl, slug, categoryNames }: Props) => {
 
   return (
     <Link
-      href={`/post/${id}`}
+      href={`/post/${slug}`}
       className="grid overflow-hidden rounded-2xl shadow-[0.2rem_0.2rem_0.8rem_rgba(0,0,0,0.2)] dark:shadow-cyan-900"
     >
       <Image
