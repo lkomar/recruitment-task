@@ -1,21 +1,5 @@
-import { apiUrl } from './utils'
 import Posts from './Posts'
-import { PaginatedPosts } from './api/posts/route'
-import { Category } from './api/categories/route'
-
-const getPosts = async (page?: number): Promise<PaginatedPosts> => {
-  const response = await fetch(
-    `${apiUrl}/api/posts${page ? `?page=${page}` : ''}`
-  )
-
-  return response.json()
-}
-
-const getCategories = async (): Promise<Category[]> => {
-  const response = await fetch(`${apiUrl}/api/categories`)
-
-  return response.json()
-}
+import { getCategories, getPosts } from './api'
 
 type Props = { searchParams: { page?: string } }
 
