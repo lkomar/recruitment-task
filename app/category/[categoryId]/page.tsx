@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { DynamicPage } from '@/app/types'
 import { getCategories, getPostsByCategoryId } from '@/app/api'
 import Posts from '@/app/Posts'
+import CategoryFilter from '@/app/CategoryFilter'
 
 interface Props {
   categoryId: string
@@ -26,11 +27,17 @@ const CategoryPosts = async ({
     (category) => category.id === parseInt(params.categoryId)
   )
 
+  const mappedCategories = categories.map((category) => ({
+    ...category,
+    selected: category.id === parseInt(params.categoryId),
+  }))
+
   return (
     <>
       <div className="mb-4 flex flex-col items-center">
         <h1>Posts for category {`"${category?.name}"`}</h1>
       </div>
+      <CategoryFilter categories={mappedCategories} />
       <Posts
         categories={categories}
         posts={posts}

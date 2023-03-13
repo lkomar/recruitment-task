@@ -42,8 +42,7 @@ yarn coverage
 
 ## TODO
 
-- [ ] Clickable category badges
-- [ ] Redirect to category on badge click
+- [ ] Add translateY effect on post cards
 - [ ] Write unit tests for API endpoints
 - [ ] Add basic doumentation to code
 - [ ] Check if styles can be improved
@@ -58,3 +57,5 @@ yarn coverage
 - [x] Add search input filtering posts on Client side
 - [x] Add endpoint for filtering posts by categories
 - [x] Filter posts by category
+- [x] Clickable category badges
+- [x] Redirect to category on badge click

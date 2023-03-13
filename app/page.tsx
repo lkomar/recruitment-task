@@ -1,5 +1,6 @@
 import Posts from './Posts'
 import { getCategories, getPosts } from './api'
+import CategoryFilter from './CategoryFilter'
 
 interface Props {
   searchParams: { page?: string }
@@ -13,6 +14,11 @@ export default async function Home({ searchParams }: Props) {
     getPosts(page),
   ])
 
+  const mappedCategories = categories.map((category) => ({
+    ...category,
+    selected: false,
+  }))
+
   return (
     <>
       <div className="mb-4 flex flex-col items-center">
@@ -22,6 +28,7 @@ export default async function Home({ searchParams }: Props) {
           numquam tempora magnam.
         </h4>
       </div>
+      <CategoryFilter categories={mappedCategories} />
       <Posts
         categories={categories}
         posts={posts}
