@@ -42,6 +42,7 @@ yarn coverage
 
 ## TODO
 
+- [ ] Clickable category badges
 - [ ] Redirect to category on badge click
 - [ ] Write unit tests for API endpoints
 - [ ] Add basic doumentation to code
