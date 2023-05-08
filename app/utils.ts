@@ -11,7 +11,7 @@ export const getPostCategoryNames = (
   )
 
 export const apiUrl = `http://${process.env.HOST || 'localhost'}${
-  process.env.PORT ? `:${process.env.PORT}` : ''
+  process.env.NODE_ENV === 'development' ? `:${process.env.PORT}` : ''
 }`
 
 /**
