@@ -2,6 +2,7 @@
 
 import StyledLink from './StyledLink'
 import DisabledButton from './DisabledButton'
+import { apiUrl } from './utils'
 
 interface Props {
   page: number
@@ -16,7 +17,7 @@ const Pagination = ({ page, maxPages, classNames }: Props) => (
     }`}
   >
     {page > 1 ? (
-      <StyledLink href={`/?page=${page - 1}`}>Prev</StyledLink>
+      <StyledLink href={`${apiUrl}/?page=${page - 1}`}>Prev</StyledLink>
     ) : (
       <DisabledButton>Prev</DisabledButton>
     )}
@@ -24,7 +25,7 @@ const Pagination = ({ page, maxPages, classNames }: Props) => (
       {page} / {maxPages}
     </span>
     {page < maxPages ? (
-      <StyledLink href={`/?page=${page + 1}`}>Next</StyledLink>
+      <StyledLink href={`${apiUrl}/?page=${page + 1}`}>Next</StyledLink>
     ) : (
       <DisabledButton>Next</DisabledButton>
     )}
