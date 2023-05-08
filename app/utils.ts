@@ -10,7 +10,7 @@ export const getPostCategoryNames = (
     (id) => categories.find((category) => category.id === id)?.name
   )
 
-export const apiUrl = `http://${process.env.HOST || 'localhost'}${
+export const apiUrl = `http${process.env.NODE_ENV === 'development' ? 's' : ''}://${process.env.HOST || 'localhost'}${
   process.env.NODE_ENV === 'development' ? `:${process.env.PORT}` : ''
 }`
 
