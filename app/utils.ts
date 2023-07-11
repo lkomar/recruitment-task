@@ -10,9 +10,11 @@ export const getPostCategoryNames = (
     (id) => categories.find((category) => category.id === id)?.name
   )
 
-export const apiUrl = `http${process.env.NODE_ENV === 'development' ? 's' : ''}://${process.env.HOST || 'localhost'}${
-  process.env.NODE_ENV === 'development' ? `:${process.env.PORT}` : ''
-}`
+export const isDev = process.env.NODE_ENV === 'development'
+
+export const isProd = process.env.NODE_ENV === 'production'
+
+export const apiUrl = process.env.API_URL
 
 /**
  * I'm aware that searchKey: keyof T isn't bulletproof, but I didn't want to

@@ -1,6 +1,6 @@
-import Posts from './Posts'
+import Posts from './Components/Posts'
 import { getCategories, getPosts } from './api'
-import CategoryFilter from './CategoryFilter'
+import CategoryFilter from './Components/CategoryFilter'
 
 interface Props {
   searchParams: { page?: string }

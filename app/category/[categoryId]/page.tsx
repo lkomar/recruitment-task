@@ -2,8 +2,8 @@ import { notFound } from 'next/navigation'
 
 import { DynamicPage } from '@/app/types'
 import { getCategories, getPostsByCategoryId } from '@/app/api'
-import Posts from '@/app/Posts'
-import CategoryFilter from '@/app/CategoryFilter'
+import Posts from '@/app/Components/Posts'
+import CategoryFilter from '@/app/Components/CategoryFilter'
 
 interface Props {
   categoryId: string

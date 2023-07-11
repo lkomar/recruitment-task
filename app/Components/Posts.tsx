@@ -7,7 +7,7 @@ import { useState } from 'react'
 import Card from './Card'
 import Pagination from './Pagination'
 import Search from './Search'
-import { filterCollection, getPostCategoryNames } from './utils'
+import { filterCollection, getPostCategoryNames } from '../utils'
 
 interface Props {
   categories: Category[]

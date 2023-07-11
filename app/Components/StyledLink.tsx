@@ -3,7 +3,7 @@
 import Link, { LinkProps } from 'next/link'
 import { ReactNode } from 'react'
 
-const Button = ({
+const StyledLink = ({
   children,
   ...props
 }: LinkProps & { children: ReactNode }) => (
@@ -15,4 +15,4 @@ const Button = ({
   </Link>
 )
 
-export default Button
+export default StyledLink
