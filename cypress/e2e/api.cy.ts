@@ -1,6 +1,8 @@
-import { apiUrl } from '../../app/utils'
 import blog from '../../public/blog.json'
 import { paginationUtils } from '../../app/utils'
+import { env } from '@/app/env'
+
+const apiUrl = env.API_URL
 
 describe('GET /api/categories', () => {
   it('should return categories with status 200', () => {
