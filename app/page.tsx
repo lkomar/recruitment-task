@@ -1,6 +1,8 @@
 import Posts from './Components/Posts'
 import { getCategories, getPosts } from './api'
 import CategoryFilter from './Components/CategoryFilter'
+import Error from './error'
+import ErrorBoundary from '@/app/Components/ErrorBoundary'
 
 interface Props {
   searchParams: { page?: string }
@@ -28,13 +30,15 @@ export default async function Home({ searchParams }: Props) {
           numquam tempora magnam.
         </h4>
       </div>
-      <CategoryFilter categories={mappedCategories} />
-      <Posts
-        categories={categories}
-        posts={posts}
-        page={page}
-        maxPages={pages.toString()}
-      />
+      <ErrorBoundary fallback={<Error />}>
+        <CategoryFilter categories={mappedCategories} />
+        <Posts
+          categories={categories}
+          posts={posts}
+          page={page}
+          maxPages={pages.toString()}
+        />
+      </ErrorBoundary>
     </>
   )
 }
