@@ -22,7 +22,7 @@ export default async function Home({ searchParams }: Props) {
   }))
 
   return (
-    <>
+    <div className="h-full w-full overflow-hidden">
       <div className="mb-4 flex flex-col items-center">
         <h1>From the blog</h1>
         <h4 className="max-w-xl text-center">
@@ -39,6 +39,6 @@ export default async function Home({ searchParams }: Props) {
           maxPages={pages.toString()}
         />
       </ErrorBoundary>
-    </>
+    </div>
   )
 }
