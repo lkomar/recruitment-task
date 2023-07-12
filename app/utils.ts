@@ -1,4 +1,5 @@
 import { Category } from '@/app/api/categories/route'
+import { env } from '@/app/env'
 
 const ITEMS_PER_PAGE = 15
 
@@ -9,12 +10,6 @@ export const getPostCategoryNames = (
   categoryIds.map(
     (id) => categories.find((category) => category.id === id)?.name
   )
-
-export const isDev = process.env.NODE_ENV === 'development'
-
-export const isProd = process.env.NODE_ENV === 'production'
-
-export const apiUrl = process.env.API_URL
 
 /**
  * I'm aware that searchKey: keyof T isn't bulletproof, but I didn't want to

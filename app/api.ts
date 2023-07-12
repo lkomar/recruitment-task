@@ -1,6 +1,8 @@
 import { Category } from './api/categories/route'
 import { PaginatedPosts, Post } from './api/posts/route'
-import { apiUrl } from './utils'
+import { env } from '@/app/env'
+
+const apiUrl = env.API_URL
 
 export const getCategories = async (): Promise<Category[]> => {
   const response = await fetch(`${apiUrl}/api/categories`)
