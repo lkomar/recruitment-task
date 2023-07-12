@@ -19,9 +19,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="h-full w-full">
+    <html lang="en">
       <body
-        className={`${lato.className} h-full w-full bg-white text-black dark:bg-gray-900 dark:text-white`}
+        className={`${lato.className} bg-white text-black dark:bg-gray-900 dark:text-white`}
       >
         {children}
       </body>
