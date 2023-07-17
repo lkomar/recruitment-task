@@ -1,4 +1,4 @@
-Welcome! This is my approach to the task I got from a great guy that wrote to me on LinkedIn 😁. I decided to give it a go since the stack looks quite awesome 🔥. I'm a huge fan of dark mode! With that in mind I added some basic styling for it, but let the browser defaults decide which to present. I didn't use Cypress for testing before so I decided I'll learn something new even though it's probably not the most common choice for a testing library.
+Welcome! This is my approach to the task I got from a great guy that wrote to me on LinkedIn 😁. I decided to give it a go since the stack looks quite awesome 🔥. I'm a huge fan of dark mode! With that in mind I added some basic styling for it, but let the browser defaults decide which to present. I didn't use Cypress for testing before so I decided I'll learn something new even though next projects tend to use React Testing Library with Jest in order to do that.
 
 ---
 
