@@ -35,7 +35,7 @@ const Posts = ({ categories, posts, page, maxPages }: Props) => {
       </div>
       <Pagination page={parseInt(page)} maxPages={parseInt(maxPages)} />
       {filteredPosts.length ? (
-        <div className="grid grid-cols-1 justify-center gap-8 p-12 sm:grid-cols-fit">
+        <div className="grid grid-cols-1 justify-center gap-8 p-8 sm:grid-cols-fit sm:p-12">
           {filteredPosts.map((post) => (
             <Card
               {...post}
