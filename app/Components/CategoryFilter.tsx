@@ -6,7 +6,7 @@ interface Props {
 }
 
 const CategoryFilter = ({ categories }: Props) => (
-  <div className="flex justify-center">
+  <div className="flex flex-wrap justify-center">
     {categories.map((category) => (
       <Link
         key={category.id}
